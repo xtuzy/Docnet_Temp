@@ -21,6 +21,8 @@
     <ErrorReport>prompt</ErrorReport>
     <WarningLevel>4</WarningLevel>
     <AllowUnsafeBlocks>true</AllowUnsafeBlocks>
+    <BTouchExtraArgs>
+    </BTouchExtraArgs>
   </PropertyGroup>
   <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
     <DebugType>portable</DebugType>
@@ -39,6 +41,9 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="libpdfium.linkwith.cs">
+      <DependentUpon>libpdfium.a</DependentUpon>
+    </Compile>
     <Compile Include="StructsAndEnums.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -54,12 +59,7 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <NativeReference Include="Native References/libpdfium.a">
-      <Kind>Static</Kind>
-      <ForceLoad>True</ForceLoad>
-      <IsCxx>True</IsCxx>
-      <SmartLink>False</SmartLink>
-    </NativeReference>
+    <ObjcBindingNativeLibrary Include="libpdfium.a" />
   </ItemGroup>
   <Import Project="..\Docnet.Core\Docnet.Core.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />

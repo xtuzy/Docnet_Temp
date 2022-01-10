@@ -13,6 +13,7 @@ using AndroidX.Core.Content;
 using Android;
 using XamarinAndroidCommon.Tools;
 using Xamarin.Essentials;
+using Xamarin.Helper.Files;
 
 namespace TestDocnet
 {
@@ -53,14 +54,15 @@ namespace TestDocnet
         public void RenderToImage()
         {
 
-            LogUtils.Info("RenderToImage", $"{File.Exists(Path)}存在pdf");
+            LogUtils.Info("RenderToImage", $"{File.Exists(Path)} 存在pdf");
             //从路径直接读取
             //var docReader = DocNet.GetDocReader(Path,new PageDimensions(1700, 2220));
             //从流读取
             /*using (StreamReader sr = new StreamReader(Path))
             {
             }*/
-            var fileStream = File.OpenRead(Path);
+            //var fileStream = File.OpenRead(Path);
+            var fileStream = FileHelper.ReadMemoryStreamFromAssets(this,"XamarinBinding.pdf");
             var docReader = DocNet.GetDocReader(fileStream, null);
             var size = docReader.GetPageSize(0);
             LogUtils.Info("RenderToImage", $"PageNativeSize:{size.Width },{size.Height}");
@@ -70,7 +72,6 @@ namespace TestDocnet
             LogUtils.Info("RenderToImage",$"屏幕密度:{density}");
             //Toast.MakeText(this, $"屏幕密度:{density}", ToastLength.Long).Show();
             var pageReader = docReader.GetPageReader(0);
-
             var rawBytes = pageReader.GetImage(dpi:(int)(density*160));
 
             var width = pageReader.GetPageWidthPixel();
