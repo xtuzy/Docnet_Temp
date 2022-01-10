@@ -33,6 +33,7 @@
     <Compile Include="$(MSBuildThisFileDirectory)Readers\IDocReader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Readers\IPageReader.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Readers\PageReader.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)Setting.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Utils\StreamManager.cs" />
     <Compile Include="$(MSBuildThisFileDirectory)Validation\Validator.cs" />
   </ItemGroup>

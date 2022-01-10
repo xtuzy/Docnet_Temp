@@ -25,11 +25,11 @@ namespace Docnet.Core.Bindings
     internal class fpdf_save
     {
         [SuppressUnmanagedCodeSecurity]
-        [DllImport("pdfium", CallingConvention = CallingConvention.Cdecl, EntryPoint = "FPDF_SaveAsCopy")]
+        [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "FPDF_SaveAsCopy")]
         internal static extern int FPDF_SaveAsCopy(IntPtr document, FpdfStreamWriter pFileWrite, uint flags);
 
         [SuppressUnmanagedCodeSecurity]
-        [DllImport("pdfium", CallingConvention = CallingConvention.Cdecl, EntryPoint = "FPDF_SaveWithVersion")]
+        [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl, EntryPoint = "FPDF_SaveWithVersion")]
         private static extern int FPDF_SaveWithVersion(IntPtr document, FpdfStreamWriter pFileWrite, uint flags, int fileVersion);
 
         [UnmanagedFunctionPointer(CallingConvention.Cdecl)]
@@ -83,7 +83,7 @@ namespace Docnet.Core.Bindings
         public partial struct __Internal
         {
             [SuppressUnmanagedCodeSecurity]
-            [DllImport("pdfium", CallingConvention = CallingConvention.Cdecl,
+            [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
     EntryPoint = "FPDF_LoadCustomDocument")]
             internal static extern IntPtr CustomFPDF_LoadCustomDocument([MarshalAs(UnmanagedType.LPStruct)] CustomFPDF_FILEACCESS pFileAccess,
     [MarshalAs(UnmanagedType.LPStr)] string password);
