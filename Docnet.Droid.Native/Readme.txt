@@ -1,0 +1,2 @@
+由https://github.com/GowenGit/docnet修改而来,原项目通过CppSharp对Pdfium的C头文件进行了包装供C#调用,
+但是原项目针对Android平台,有点Bug,因此通过搜集Android平台的So文件在android类库项目中重新构建,基本未修改
