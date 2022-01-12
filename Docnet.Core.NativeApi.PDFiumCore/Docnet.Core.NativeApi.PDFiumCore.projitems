@@ -1,0 +1,23 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <PropertyGroup>
+    <MSBuildAllProjects Condition="'$(MSBuildVersion)' == '' Or '$(MSBuildVersion)' &lt; '16.0'">$(MSBuildAllProjects);$(MSBuildThisFileFullPath)</MSBuildAllProjects>
+    <HasSharedItems>true</HasSharedItems>
+    <SharedGUID>284fe3bf-ab8c-4bff-a662-5727d395d6a0</SharedGUID>
+  </PropertyGroup>
+  <PropertyGroup Label="Configuration">
+    <Import_RootNamespace>Docnet.Core.NativeApi.PDFiumCore</Import_RootNamespace>
+  </PropertyGroup>
+  <ItemGroup>
+    <Compile Include="$(MSBuildThisFileDirectory)CppSharpRuntime\MarshalUtil.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CppSharpRuntime\Pointer.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CppSharpRuntime\SafeUnmanagedMemoryHandle.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CppSharpRuntime\SymbolResolver.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CppSharpRuntime\UTF32Marshaller.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CppSharpRuntime\UTF8Marshaller.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)CppSharpRuntime\VTables.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PDFiumCore.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)PDFiumCoreTest.cs" />
+    <Compile Include="$(MSBuildThisFileDirectory)RenderFlags.cs" />
+  </ItemGroup>
+</Project>

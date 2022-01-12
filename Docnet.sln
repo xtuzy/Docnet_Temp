@@ -13,9 +13,13 @@ Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Docnet.Core", "Docnet.Core\
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Docnet.iOS.Test", "Docnet.iOS.Test\Docnet.iOS.Test.csproj", "{82AAA326-AA11-4D90-B3A3-AFD153119FF0}"
 EndProject
+Project("{D954291E-2A0B-460D-934E-DC6B0785DB48}") = "Docnet.Core.NativeApi.PDFiumCore", "Docnet.Core.NativeApi.PDFiumCore\Docnet.Core.NativeApi.PDFiumCore.shproj", "{284FE3BF-AB8C-4BFF-A662-5727D395D6A0}"
+EndProject
 Global
 	GlobalSection(SharedMSBuildProjectFiles) = preSolution
+		Docnet.Core.NativeApi.PDFiumCore\Docnet.Core.NativeApi.PDFiumCore.projitems*{284fe3bf-ab8c-4bff-a662-5727d395d6a0}*SharedItemsImports = 13
 		Docnet.Core\Docnet.Core.projitems*{94bd3da9-6e91-4a0a-991e-d288293b1fac}*SharedItemsImports = 4
+		Docnet.Core.NativeApi.PDFiumCore\Docnet.Core.NativeApi.PDFiumCore.projitems*{f1588fe2-74be-410c-8a19-5ec795a745a4}*SharedItemsImports = 4
 		Docnet.Core\Docnet.Core.projitems*{f1588fe2-74be-410c-8a19-5ec795a745a4}*SharedItemsImports = 4
 		Docnet.Core\Docnet.Core.projitems*{f7a7173b-0d2c-4d26-9b9c-9b8df80b0d10}*SharedItemsImports = 13
 	EndGlobalSection
@@ -142,6 +146,7 @@ Global
 		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Debug|ARM64.Build.0 = Debug|iPhoneSimulator
 		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Debug|iPhone.ActiveCfg = Debug|iPhone
 		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Debug|iPhone.Build.0 = Debug|iPhone
+		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Debug|iPhone.Deploy.0 = Debug|iPhone
 		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Debug|iPhoneSimulator.ActiveCfg = Debug|iPhoneSimulator
 		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Debug|iPhoneSimulator.Build.0 = Debug|iPhoneSimulator
 		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Debug|x64.ActiveCfg = Debug|iPhoneSimulator
@@ -156,8 +161,10 @@ Global
 		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Release|ARM64.Build.0 = Release|iPhoneSimulator
 		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Release|iPhone.ActiveCfg = Release|iPhone
 		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Release|iPhone.Build.0 = Release|iPhone
+		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Release|iPhone.Deploy.0 = Release|iPhone
 		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Release|iPhoneSimulator.ActiveCfg = Release|iPhoneSimulator
 		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Release|iPhoneSimulator.Build.0 = Release|iPhoneSimulator
+		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Release|iPhoneSimulator.Deploy.0 = Release|iPhoneSimulator
 		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Release|x64.ActiveCfg = Release|iPhoneSimulator
 		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Release|x64.Build.0 = Release|iPhoneSimulator
 		{82AAA326-AA11-4D90-B3A3-AFD153119FF0}.Release|x86.ActiveCfg = Release|iPhoneSimulator

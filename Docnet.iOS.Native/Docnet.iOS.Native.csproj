@@ -41,9 +41,6 @@
     <Folder Include="Resources\" />
   </ItemGroup>
   <ItemGroup>
-    <Compile Include="libpdfium.linkwith.cs">
-      <DependentUpon>libpdfium.a</DependentUpon>
-    </Compile>
     <Compile Include="StructsAndEnums.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -59,8 +56,14 @@
     </PackageReference>
   </ItemGroup>
   <ItemGroup>
-    <ObjcBindingNativeLibrary Include="libpdfium.a" />
+    <NativeReference Include="Native References/libpdfium.a">
+      <Kind>Static</Kind>
+      <IsCxx>True</IsCxx>
+      <ForceLoad>True</ForceLoad>
+      <SmartLink>True</SmartLink>
+    </NativeReference>
   </ItemGroup>
   <Import Project="..\Docnet.Core\Docnet.Core.projitems" Label="Shared" />
+  <Import Project="..\Docnet.Core.NativeApi.PDFiumCore\Docnet.Core.NativeApi.PDFiumCore.projitems" Label="Shared" />
   <Import Project="$(MSBuildExtensionsPath)\Xamarin\iOS\Xamarin.iOS.ObjCBinding.CSharp.targets" />
 </Project>

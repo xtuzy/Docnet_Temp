@@ -45,7 +45,8 @@ namespace Docnet.iOS.Test
         public override void ViewDidLoad()
         {
 
-            DocNet = DocLib.Instance;
+           
+
             View = new UniversalView();
 
             base.ViewDidLoad();
@@ -61,6 +62,8 @@ namespace Docnet.iOS.Test
 
         private void Button_TouchUpInside(object sender, EventArgs e)
         {
+            //DocNet = DocLib.Instance;
+            Core.NativeApi.PDFiumCore.PDFiumCoreTest.Init();
             RenderToImage();
         }
 

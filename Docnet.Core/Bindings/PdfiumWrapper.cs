@@ -1211,12 +1211,15 @@ namespace Docnet.Core.Bindings
             [FieldOffset(16)] internal float e;
 
             [FieldOffset(20)] internal float f;
-
+#if __IOS__
+            //当前选择的iOS的静态库中未包含该方法
+#else
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "??0_FS_MATRIX_@@QEAA@AEBU0@@Z")]
             internal static extern IntPtr
                 cctor(IntPtr instance, IntPtr _0);
+#endif
         }
 
         public IntPtr __Instance { get; protected set; }
@@ -1353,12 +1356,15 @@ namespace Docnet.Core.Bindings
             [FieldOffset(8)] internal float right;
 
             [FieldOffset(12)] internal float bottom;
-
+#if __IOS__
+            //当前选择的iOS的静态库中未包含该方法
+#else
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "??0_FS_RECTF_@@QEAA@AEBU0@@Z")]
             internal static extern IntPtr
                 cctor(IntPtr instance, IntPtr _0);
+#endif
         }
 
         public IntPtr __Instance { get; protected set; }
@@ -1481,12 +1487,15 @@ namespace Docnet.Core.Bindings
             [FieldOffset(16)] internal IntPtr m_pIsolate;
 
             [FieldOffset(24)] internal uint m_v8EmbedderSlot;
-
+#if __IOS__
+            //当前选择的iOS的静态库中未包含该方法
+#else
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "??0FPDF_LIBRARY_CONFIG_@@QEAA@AEBU0@@Z")]
             internal static extern IntPtr
                 cctor(IntPtr instance, IntPtr _0);
+#endif
         }
 
         public IntPtr __Instance { get; protected set; }
@@ -1605,12 +1614,15 @@ namespace Docnet.Core.Bindings
             [FieldOffset(8)] internal IntPtr m_GetBlock;
 
             [FieldOffset(16)] internal IntPtr m_Param;
-
+#if __IOS__
+            //当前选择的iOS的静态库中未包含该方法
+#else
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "??0FPDF_FILEACCESS@@QEAA@AEBU0@@Z")]
             internal static extern IntPtr
                 cctor(IntPtr instance, IntPtr _0);
+#endif
         }
 
         public IntPtr __Instance { get; protected set; }
@@ -1736,12 +1748,14 @@ namespace Docnet.Core.Bindings
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDF_SetSandBoxPolicy")]
             internal static extern void FPDF_SetSandBoxPolicy(uint policy, int enable);
-
+#if __IOS__
+            //当前选择的iOS的静态库中未包含该方法
+#else
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDF_SetPrintMode")]
             internal static extern int FPDF_SetPrintMode(int mode);
-
+#endif
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDF_LoadDocument")]
@@ -1795,7 +1809,7 @@ namespace Docnet.Core.Bindings
                 EntryPoint = "FPDF_GetPageWidth")]
             internal static extern double FPDF_GetPageWidth(IntPtr page);
 
-            
+
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDF_GetPageHeight")]
@@ -1970,13 +1984,14 @@ namespace Docnet.Core.Bindings
         {
             __Internal.FPDF_SetSandBoxPolicy(policy, enable);
         }
-
+#if __IOS__
+#else
         public static int FPDF_SetPrintMode(int mode)
         {
             var __ret = __Internal.FPDF_SetPrintMode(mode);
             return __ret;
         }
-
+#endif
         public static FpdfDocumentT FPDF_LoadDocument(string file_path, string password)
         {
             var __ret = __Internal.FPDF_LoadDocument(file_path, password);
@@ -2075,7 +2090,7 @@ namespace Docnet.Core.Bindings
             return __ret;
         }
 
-    public static double FPDF_GetPageHeight(FpdfPageT page)
+        public static double FPDF_GetPageHeight(FpdfPageT page)
         {
             var __arg0 = ReferenceEquals(page, null) ? IntPtr.Zero : page.__Instance;
             var __ret = __Internal.FPDF_GetPageHeight(__arg0);
@@ -2854,12 +2869,15 @@ namespace Docnet.Core.Bindings
             [FieldOffset(20)] internal int colorspace;
 
             [FieldOffset(24)] internal int marked_content_id;
-
+#if __IOS__
+            //当前选择的iOS的静态库中未包含该方法
+#else
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "??0FPDF_IMAGEOBJ_METADATA@@QEAA@AEBU0@@Z")]
             internal static extern IntPtr
                 cctor(IntPtr instance, IntPtr _0);
+#endif
         }
 
         public IntPtr __Instance { get; protected set; }
@@ -3265,35 +3283,42 @@ namespace Docnet.Core.Bindings
                 EntryPoint = "FPDFPageObj_SetBlendMode")]
             internal static extern void FPDFPageObjSetBlendMode(IntPtr page_object,
                 [MarshalAs(UnmanagedType.LPStr)] string blend_mode);
-
+#if __IOS__
+            //当前选择的iOS的静态库中未包含该方法
+#else
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFPath_SetStrokeColor")]
             internal static extern int FPDFPathSetStrokeColor(IntPtr path, uint R, uint G, uint B,
                 uint A);
-
+#endif
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFPageObj_SetStrokeColor")]
             internal static extern int FPDFPageObjSetStrokeColor(IntPtr page_object, uint R, uint G,
                 uint B, uint A);
-
+#if __IOS__
+            //当前选择的iOS的静态库中未包含该方法
+#else
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFPath_GetStrokeColor")]
             internal static extern int FPDFPathGetStrokeColor(IntPtr path, uint* R, uint* G, uint* B,
                 uint* A);
-
+#endif
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFPageObj_GetStrokeColor")]
             internal static extern int FPDFPageObjGetStrokeColor(IntPtr page_object, uint* R, uint* G,
                 uint* B, uint* A);
-
+#if __IOS__
+            //当前选择的iOS的静态库中未包含该方法
+#else
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFPath_SetStrokeWidth")]
             internal static extern int FPDFPathSetStrokeWidth(IntPtr path, float width);
+#endif
 
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
@@ -3304,44 +3329,52 @@ namespace Docnet.Core.Bindings
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFPageObj_GetStrokeWidth")]
             internal static extern int FPDFPageObjGetStrokeWidth(IntPtr page_object, float* width);
-
+#if __IOS__
+            //当前选择的iOS的静态库中未包含该方法
+#else
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFPath_SetLineJoin")]
             internal static extern void FPDFPathSetLineJoin(IntPtr page_object, int line_join);
-
+#endif
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFPageObj_SetLineJoin")]
             internal static extern int FPDFPageObjSetLineJoin(IntPtr page_object, int line_join);
-
+#if __IOS__
+            //当前选择的iOS的静态库中未包含该方法
+#else
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFPath_SetLineCap")]
             internal static extern void FPDFPathSetLineCap(IntPtr page_object, int line_cap);
-
+#endif
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFPageObj_SetLineCap")]
             internal static extern int FPDFPageObjSetLineCap(IntPtr page_object, int line_cap);
-
+#if __IOS__
+            //当前选择的iOS的静态库中未包含该方法
+#else
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFPath_SetFillColor")]
             internal static extern int FPDFPathSetFillColor(IntPtr path, uint R, uint G, uint B, uint A);
-
+#endif
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFPageObj_SetFillColor")]
             internal static extern int FPDFPageObjSetFillColor(IntPtr page_object, uint R, uint G,
                 uint B, uint A);
-
+#if __IOS__
+            //当前选择的iOS的静态库中未包含该方法
+#else
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFPath_GetFillColor")]
             internal static extern int FPDFPathGetFillColor(IntPtr path, uint* R, uint* G, uint* B,
                 uint* A);
-
+#endif
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFPageObj_GetFillColor")]
@@ -3438,13 +3471,15 @@ namespace Docnet.Core.Bindings
                 EntryPoint = "FPDFText_LoadStandardFont")]
             internal static extern IntPtr FPDFTextLoadStandardFont(IntPtr document,
                 [MarshalAs(UnmanagedType.LPStr)] string font);
-
+#if __IOS__
+            //当前选择的iOS的静态库中未包含该方法
+#else
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFText_SetFillColor")]
             internal static extern int FPDFTextSetFillColor(IntPtr text_object, uint R, uint G, uint B,
                 uint A);
-
+#endif
             [SuppressUnmanagedCodeSecurity]
             [DllImport(Setting.DllName, CallingConvention = CallingConvention.Cdecl,
                 EntryPoint = "FPDFText_GetMatrix")]
@@ -3957,7 +3992,8 @@ namespace Docnet.Core.Bindings
             var __arg0 = ReferenceEquals(page_object, null) ? IntPtr.Zero : page_object.__Instance;
             __Internal.FPDFPageObjSetBlendMode(__arg0, blend_mode);
         }
-
+#if __IOS__
+#else
         public static int FPDFPathSetStrokeColor(FpdfPageobjectT path, uint R, uint G,
             uint B, uint A)
         {
@@ -3965,7 +4001,7 @@ namespace Docnet.Core.Bindings
             var __ret = __Internal.FPDFPathSetStrokeColor(__arg0, R, G, B, A);
             return __ret;
         }
-
+#endif
         public static int FPDFPageObjSetStrokeColor(FpdfPageobjectT page_object, uint R,
             uint G, uint B, uint A)
         {
@@ -3973,7 +4009,8 @@ namespace Docnet.Core.Bindings
             var __ret = __Internal.FPDFPageObjSetStrokeColor(__arg0, R, G, B, A);
             return __ret;
         }
-
+#if __IOS__
+#else
         public static int FPDFPathGetStrokeColor(FpdfPageobjectT path, ref uint R,
             ref uint G, ref uint B, ref uint A)
         {
@@ -3997,7 +4034,7 @@ namespace Docnet.Core.Bindings
                 }
             }
         }
-
+#endif
         public static int FPDFPageObjGetStrokeColor(FpdfPageobjectT page_object,
             ref uint R, ref uint G, ref uint B, ref uint A)
         {
@@ -4021,14 +4058,15 @@ namespace Docnet.Core.Bindings
                 }
             }
         }
-
+#if __IOS__
+#else
         public static int FPDFPathSetStrokeWidth(FpdfPageobjectT path, float width)
         {
             var __arg0 = ReferenceEquals(path, null) ? IntPtr.Zero : path.__Instance;
             var __ret = __Internal.FPDFPathSetStrokeWidth(__arg0, width);
             return __ret;
         }
-
+#endif
         public static int FPDFPageObjSetStrokeWidth(FpdfPageobjectT page_object,
             float width)
         {
@@ -4048,13 +4086,14 @@ namespace Docnet.Core.Bindings
                 return __ret;
             }
         }
-
+#if __IOS__
+#else
         public static void FPDFPathSetLineJoin(FpdfPageobjectT page_object, int line_join)
         {
             var __arg0 = ReferenceEquals(page_object, null) ? IntPtr.Zero : page_object.__Instance;
             __Internal.FPDFPathSetLineJoin(__arg0, line_join);
         }
-
+#endif
         public static int FPDFPageObjSetLineJoin(FpdfPageobjectT page_object,
             int line_join)
         {
@@ -4062,20 +4101,22 @@ namespace Docnet.Core.Bindings
             var __ret = __Internal.FPDFPageObjSetLineJoin(__arg0, line_join);
             return __ret;
         }
-
+#if __IOS__
+#else
         public static void FPDFPathSetLineCap(FpdfPageobjectT page_object, int line_cap)
         {
             var __arg0 = ReferenceEquals(page_object, null) ? IntPtr.Zero : page_object.__Instance;
             __Internal.FPDFPathSetLineCap(__arg0, line_cap);
         }
-
+#endif
         public static int FPDFPageObjSetLineCap(FpdfPageobjectT page_object, int line_cap)
         {
             var __arg0 = ReferenceEquals(page_object, null) ? IntPtr.Zero : page_object.__Instance;
             var __ret = __Internal.FPDFPageObjSetLineCap(__arg0, line_cap);
             return __ret;
         }
-
+#if __IOS__
+#else
         public static int FPDFPathSetFillColor(FpdfPageobjectT path, uint R, uint G,
             uint B, uint A)
         {
@@ -4083,7 +4124,7 @@ namespace Docnet.Core.Bindings
             var __ret = __Internal.FPDFPathSetFillColor(__arg0, R, G, B, A);
             return __ret;
         }
-
+#endif
         public static int FPDFPageObjSetFillColor(FpdfPageobjectT page_object, uint R,
             uint G, uint B, uint A)
         {
@@ -4091,7 +4132,8 @@ namespace Docnet.Core.Bindings
             var __ret = __Internal.FPDFPageObjSetFillColor(__arg0, R, G, B, A);
             return __ret;
         }
-
+#if __IOS__
+#else
         public static int FPDFPathGetFillColor(FpdfPageobjectT path, ref uint R,
             ref uint G, ref uint B, ref uint A)
         {
@@ -4115,7 +4157,7 @@ namespace Docnet.Core.Bindings
                 }
             }
         }
-
+#endif
         public static int FPDFPageObjGetFillColor(FpdfPageobjectT page_object, ref uint R,
             ref uint G, ref uint B, ref uint A)
         {
@@ -4336,7 +4378,8 @@ namespace Docnet.Core.Bindings
             else __result0 = FpdfFontT.__CreateInstance(__ret);
             return __result0;
         }
-
+#if __IOS__
+#else
         public static int FPDFTextSetFillColor(FpdfPageobjectT text_object, uint R, uint G,
             uint B, uint A)
         {
@@ -4344,7 +4387,7 @@ namespace Docnet.Core.Bindings
             var __ret = __Internal.FPDFTextSetFillColor(__arg0, R, G, B, A);
             return __ret;
         }
-
+#endif
         public static int FPDFTextGetMatrix(FpdfPageobjectT text, ref double a,
             ref double b, ref double c, ref double d, ref double e, ref double f)
         {

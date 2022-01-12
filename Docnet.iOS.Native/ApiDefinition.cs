@@ -4,7 +4,7 @@ using ObjCRuntime;
 using Foundation;
 using UIKit;
 
-namespace NativeLibrary
+namespace Docnet.Core.Bindings
 {
     // The first step to creating a binding is to add your native library ("libNativeLibrary.a")
     // to the project by right-clicking (or Control-clicking) the folder containing this source
@@ -62,5 +62,8 @@ namespace NativeLibrary
     //
     // For more information, see https://aka.ms/ios-binding
     //
+
+    
+   
 }
 

@@ -1,6 +1,8 @@
-﻿using System.Reflection;
+﻿using ObjCRuntime;
+using System.Reflection;
 using System.Runtime.CompilerServices;
 using System.Runtime.InteropServices;
+//[assembly: LinkWith("libpdfium.a", LinkTarget.ArmV7 | LinkTarget.Simulator | LinkTarget.x86_64 | LinkTarget.Arm64, ForceLoad = true, IsCxx = true, SmartLink = true)]
 
 // General Information about an assembly is controlled through the following 
 // set of attributes. Change these attribute values to modify the information

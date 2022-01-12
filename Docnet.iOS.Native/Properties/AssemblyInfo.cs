@@ -1,7 +1,10 @@
 ﻿using System.Reflection;
-using System.Runtime.CompilerServices;
+using System.Runtime .CompilerServices;
 
 using Foundation;
+using ObjCRuntime;
+
+//[assembly: LinkWith("libpdfium.a", LinkTarget.ArmV7 | LinkTarget.Simulator | LinkTarget.x86_64 | LinkTarget.Arm64, ForceLoad = true, IsCxx = true, SmartLink = true)]
 
 // This attribute allows you to mark your assemblies as “safe to link”.
 // When the attribute is present, the linker—if enabled—will process the assembly
@@ -12,11 +15,11 @@ using Foundation;
 // Information about this assembly is defined by the following attributes.
 // Change them to the values specific to your project.
 
-[assembly: AssemblyTitle("NativeLibrary")]
+[assembly: AssemblyTitle("Docnet.Core")]
 [assembly: AssemblyDescription("")]
 [assembly: AssemblyConfiguration("")]
 [assembly: AssemblyCompany("")]
-[assembly: AssemblyProduct("NativeLibrary")]
+[assembly: AssemblyProduct("Docnet.Core")]
 [assembly: AssemblyCopyright("Copyright ©  2017")]
 [assembly: AssemblyTrademark("")]
 [assembly: AssemblyCulture("")]
